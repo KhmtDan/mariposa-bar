@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  cursor: url("assets/images/cursor/Beer.cur"), default;
+  cursor: url("/assets/images/cursor/Beer.cur"), default;
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   background: radial-gradient(
@@ -224,4 +224,3 @@ section,
     font-size: 14px;
   }
 }
-
