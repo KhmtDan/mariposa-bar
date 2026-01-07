@@ -162,7 +162,7 @@
   background-color: rgba(42, 82, 190, 0.9);
   color: #f0f0f0;
   border-radius: 8px;
-  cursor: url("assets/images/cursor/beer.cur"), pointer;
+  cursor: url("../images/cursor/beer.cur"), pointer;
   font-weight: bold;
 }
 

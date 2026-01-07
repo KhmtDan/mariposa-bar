@@ -92,5 +92,5 @@
 
 .nav-menu a:hover {
   color: #5865f2;
-  cursor: url(assets/images/cursor/foo108.cur), pointer;
+  cursor: url(../images/cursor/foo108.cur), pointer;
 }
