@@ -23,7 +23,7 @@
 }
 
 .link-button:hover {
-  cursor: url("/assets/images/cursor/foo108.cur"), pointer;
+  cursor: url("assets/images/cursor/foo108.cur"), pointer;
   color: #ffffff;
   animation-duration: 1.5s;
 }
