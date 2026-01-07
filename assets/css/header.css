@@ -1,0 +1,96 @@
+.main-header {
+  background-color: rgba(15, 15, 37, 0.4);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #1a1a4e;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.logo-image span {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: #132c43 10px;
+}
+
+.beer-counter {
+  font-size: small;
+}
+
+#beer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2a317e, #2d1b4e);
+  color: #f0f0f0;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  cursor: url("/assets/images/cursor/foo108.cur"), pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(45, 27, 78, 0.6);
+  letter-spacing: 1px;
+  outline: none;
+  width: 150px;
+  height: 40px;
+  font-size: small;
+  text-wrap: nowrap;
+}
+
+#beer-button:hover {
+  background: linear-gradient(135deg, #5865f2, #3d2666);
+  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
+  cursor: url(/assets/images/cursor/foo108.cur), pointer;
+}
+
+#beer-button:active {
+  transform: translateY(1px);
+}
+
+#beer-count {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+.logo-image {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo-image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #5865f2;
+  cursor: url(/assets/images/cursor/foo108.cur), pointer;
+}
