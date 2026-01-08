@@ -64,7 +64,7 @@
 }
 
 .game-hours {
-  color: #310062;
+  color: #4b0082;
   font-size: 2em;
   font-weight: 800;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
@@ -93,4 +93,5 @@
   color: #666;
   margin-top: 10px;
 }
+
 
