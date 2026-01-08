@@ -38,12 +38,12 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  filter: brightness(0.4) sepia(20%);
-  transition: filter 0.3s;
+  filter: brightness(0.3) grayscale(100%); 
+    transition: filter 0.3s;
 }
 
 .game-card:hover .game-img {
-  filter: brightness(0.6) sepia(0%);
+  filter: brightness(0.5) grayscale(0%);
 }
 
 .game-info {
@@ -58,7 +58,9 @@
   font-size: 1.4em;
   font-weight: bold;
   color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 
+        0 2px 4px rgba(0,0,0,1), 
+        0 0 10px rgba(0,0,0,0.8);
   margin-bottom: 5px;
   display: block;
 }
@@ -67,7 +69,13 @@
   color: #5865f2;
   font-size: 2em;
   font-weight: 800;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  text-shadow: 
+        2px 2px 0px #000000,
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px 1px 0 #000000,
+        0 0 20px rgba(0,0,0,0.9);
 }
 
 .loading-text {
@@ -93,6 +101,7 @@
   color: #666;
   margin-top: 10px;
 }
+
 
 
 
