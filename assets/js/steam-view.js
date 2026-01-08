@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       games.forEach((game) => {
         const li = document.createElement("li");
         li.className = "game-card";
-        li.innerHTML = `img src="${game.image} alt="${game.name}" class="game-img" <div class="game-info">
+        li.innerHTML = `<img src="${game.image} alt="${game.name}" class="game-img" <div class="game-info">
                         <span class="game-title">${game.name}</span>
                         <span class="game-hours">⏱ ${game.hours} ч.</span>
                     </div>`;
@@ -30,3 +30,4 @@ document.addEventListener("DOMContentLoaded", () => {
         '<li class="loading-text">Данные обновляются... Зайдите позже.</li>';
     });
 });
+
