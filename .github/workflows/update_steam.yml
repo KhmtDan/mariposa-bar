@@ -23,7 +23,7 @@ jobs:
       - name: Run update script
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-        run: node js/update-games.js
+        run: node assets/js/update-games.js
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
