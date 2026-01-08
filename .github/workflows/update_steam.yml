@@ -1,0 +1,32 @@
+name: Update Steam Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *' 
+  workflow_dispatch: 
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write 
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Run update script
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+        run: node scripts/update-games.js
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update Steam stats 🎮"
+          file_pattern: "data/steam_data.json"
