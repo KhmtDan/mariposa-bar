@@ -17,10 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
       games.forEach((game) => {
         const li = document.createElement("li");
         li.className = "game-card";
-        li.innerHTML = `<img src="${game.image} alt="${game.name}" class="game-img" <div class="game-info">
-                        <span class="game-title">${game.name}</span>
-                        <span class="game-hours">⏱ ${game.hours} ч.</span>
-                    </div>`;
+        li.innerHTML = `
+                    <div class="game-card-content">
+                        <img src="${game.image}" alt="${game.name}" class="game-img">
+                        <div class="game-info">
+                            <span class="game-title">${game.name}</span>
+                            <span class="game-hours">⏱ ${game.hours} ч.</span>
+                        </div>
+                    </div>
+                `;
         listElement.appendChild(li);
       });
     })
@@ -30,4 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
         '<li class="loading-text">Данные обновляются... Зайдите позже.</li>';
     });
 });
+
 
