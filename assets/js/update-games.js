@@ -6,10 +6,10 @@ const fs = require("fs");
 const https = require("https");
 
 const PLAYER_IDS = [
-  "STEAM_0:0:503393975",
-  "STEAM_0:0:553390492",
-  "STEAM_0:1:38564834",
-  "STEAM_0:0:441781708",
+  "76561198967053678",
+  "76561199067046712",
+  "76561198037395397",
+  "76561198843829144",
 ];
 
 const API_KEY = process.env.STEAM_API_KEY;
