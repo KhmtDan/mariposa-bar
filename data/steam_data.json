@@ -2,49 +2,49 @@
   {
     "id": 105600,
     "name": "Terraria",
-    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/105600/header.jpg",
     "hours": 164
   },
   {
     "id": 1281930,
     "name": "tModLoader",
-    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1281930/header.jpg",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/1281930/header.jpg",
     "hours": 163
   },
   {
     "id": 548430,
     "name": "Deep Rock Galactic",
-    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548430/header.jpg",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/548430/header.jpg",
     "hours": 17
   },
   {
     "id": 892970,
     "name": "Valheim",
-    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/header.jpg",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/892970/header.jpg",
     "hours": 17
   },
   {
     "id": 3527290,
     "name": "PEAK",
-    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/header.jpg",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/3527290/header.jpg",
     "hours": 14
   },
   {
     "id": 1158940,
     "name": "Blazing Sails",
-    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158940/header.jpg",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/1158940/header.jpg",
     "hours": 4
   },
   {
     "id": 2422870,
     "name": "Bronzebeard's Tavern",
-    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2422870/header.jpg",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/2422870/header.jpg",
     "hours": 2
   },
   {
     "id": 1625450,
     "name": "Muck",
-    "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1625450/header.jpg",
+    "image": "https://cdn.akamai.steamstatic.com/steam/apps/1625450/header.jpg",
     "hours": 0
   }
 ]
