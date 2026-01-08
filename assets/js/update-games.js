@@ -95,7 +95,7 @@ async function main() {
             commonGames.push({
                 id: appId,
                 name: game.name,
-                image: `https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/${appId}/header.jpg`,
+                image: `https://cdn.akamai.steamstatic.com/steam/apps/${appId}/header.jpg`,
                 hours: Math.floor(minPlaytime / 60)
             });
         }
@@ -109,3 +109,4 @@ async function main() {
 }
 
 main();
+
