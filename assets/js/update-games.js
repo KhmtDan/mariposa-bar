@@ -47,6 +47,14 @@ async function main() {
     PLAYER_IDS.map((id) => getGames(id))
   );
 
+  const activePlayersGames = allPlayersData.filter((games) => games !== null);
+  if (activePlayersGames.length === 0) {
+    console.error(
+      "❌ ИТОГ: Нет доступных данных ни для одного игрока. Проверьте настройки приватности Steam у всех."
+    );
+    process.exit(1);
+  }
+
   if (allPlayersData.some((games) => games.length === 0)) {
     console.error(
       "У кого-то закрыт профиль или нет игр! Проверьте настройки приватности Steam."
