@@ -1,5 +1,3 @@
-// --- Тут качаем игры одного человека ---
-
 const { rejects } = require("assert/strict");
 const { resolve } = require("dns");
 const fs = require("fs");
@@ -13,9 +11,11 @@ const PLAYER_IDS = [
 ];
 
 const API_KEY = process.env.STEAM_API_KEY;
+
 function getGames(steamId) {
     return new Promise((resolve) => {
-        if (!API_KEY) { resolve(null); return; 
+        if (!API_KEY) { resolve(null); return; }
+        if (steamId.includes('xxx')) { resolve(null); return; }
 
         const url = `https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${API_KEY}&steamid=${steamId}&format=json&include_appinfo=1&include_played_free_games=1`;
         
@@ -23,11 +23,7 @@ function getGames(steamId) {
             let data = '';
             res.on('data', chunk => data += chunk);
             res.on('end', () => {
-                if (res.statusCode !== 200) { 
-                    console.log(`Ошибка Steam для ${steamId}: ${res.statusCode}`);
-                    resolve(null); 
-                    return; 
-                }
+                if (res.statusCode !== 200) { resolve(null); return; }
                 try {
                     const parsed = JSON.parse(data);
                     if (parsed.response && parsed.response.games) {
@@ -46,18 +42,14 @@ async function main() {
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 
     if (!API_KEY) {
-        console.log('Нет ключа API. Создаю пустой файл.');
         fs.writeFileSync(`${outputDir}/steam_data.json`, '[]');
         return;
     }
 
     const rawResults = await Promise.all(PLAYER_IDS.map(id => getGames(id)));
-    
     const activePlayersGames = rawResults.filter(g => g !== null);
 
     if (activePlayersGames.length === 0) {
-        console.log('Не удалось получить данные ни для одного игрока. Проверь приватность профилей.');
-
         fs.writeFileSync(`${outputDir}/steam_data.json`, '[]');
         return;
     }
@@ -90,7 +82,7 @@ async function main() {
     const topGames = commonGames.slice(0, 10);
     
     fs.writeFileSync(`${outputDir}/steam_data.json`, JSON.stringify(topGames, null, 2));
-    console.log('Успешно обновлено! Файл записан.');
+    console.log('Done');
 }
 
 main();
