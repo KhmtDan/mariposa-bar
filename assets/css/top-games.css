@@ -6,16 +6,13 @@
 }
 
 .game-card {
-  display: flex;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.7);
+  margin-bottom: 15px;
   border: 1px solid #444;
-  border-left: 4px solid #bc13fe;
-  margin-bottom: 12px;
-  padding: 10px;
-  border-radius: 6px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 5px solid #bc13fe;
+  border-radius: 8px;
   overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #000;
 }
 
 .game-card:hover {
@@ -24,36 +21,53 @@
   border-color: #bc13fe;
 }
 
+.game-card-content {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .game-img {
-  width: 90px;
-  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-  margin-right: 15px;
-  flex-shrink: 0;
+  z-index: 1;
+  filter: brightness(0.4) sepia(20%);
+  transition: filter 0.3s;
+}
+
+.game-card:hover .game-img {
+  filter: brightness(0.6) sepia(0%);
 }
 
 .game-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
 }
 
 .game-title {
   font-family: "Courier New", monospace;
-  font-size: 1.1em;
+  font-size: 1.4em;
   font-weight: bold;
-  color: #f0f0f0;
-  margin-bottom: 4px;
-  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 5px;
+  display: block;
 }
 
 .game-hours {
   color: #bc13fe;
-  font-size: 1.6em;
+  font-size: 2em;
   font-weight: 800;
-  text-shadow: 0 0 5px rgba(188, 19, 254, 0.5);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }
 
 .loading-text {
