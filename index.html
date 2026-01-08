@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/top-games.css" />
     <link rel="stylesheet" href="assets/css/sidebar.css" />
     <link rel="stylesheet" href="assets/css/gallery.css" />
     <link rel="stylesheet" href="assets/css/games.css" />
@@ -60,14 +61,13 @@
           <aside class="sidebar">
             <section>
               <article>
-                <h3 class="top-hours">Играли <br />больше всего:</h3>
-                <ul>
-                  <li>Далеко-далеко, за словесными.</li>
-                  <li>Далеко-далеко, за словесными.</li>
-                  <li>Далеко-далеко, за словесными.</li>
-                  <li>Далеко-далеко, за словесными.</li>
-                  <li>Далеко-далеко, за словесными.</li>
-                </ul>
+                <div class="steam-container">
+                  <h3 class="neon-text">Играли <br />больше всего:</h3>
+                  <ul id="steam-game-list" class="game-list">
+                    <li class="loading-text">Загрузка данных...</li>
+                  </ul>
+                  <div class="update-info">Обновляется раз в 24 часа</div>
+                </div>
                 <h3 class="our-games">Наши записи:</h3>
                 <div class="video-container">
                   <iframe
@@ -345,7 +345,7 @@
     </footer>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/counter.js"></script>
-    <script src="update-games.js"></script>
+    <script src="assets/js/steam-view.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/member-card.js"></script>
   </body>
